@@ -2,7 +2,7 @@
 title: "How to setup a darkweb IRC"
 date: 2020-07-13T13:00:24+05:30
 tag: ['darkweb','docker','IRC']
-draft: true
+draft: false
 ---
 
 
