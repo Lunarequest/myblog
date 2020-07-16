@@ -1,0 +1,10 @@
+<!-- layouts/partials/tags.html -->
+{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+<ul>
+  {{ range $index, $tag := . }} {{ with $.Site.GetPage -}}
+  <li>
+    <a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+  </li>
+  {{- end -}} {{- end -}}
+</ul>
+{{ end }}

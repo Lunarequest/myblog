@@ -38,3 +38,6 @@ footnoteReturnLinkContents = "^"
   width = 50
   height = 50
   alt = "Logo"
+[taxonomies]
+  category = "categories"
+  tag = "tags"
