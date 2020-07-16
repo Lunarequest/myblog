@@ -1,5 +1,5 @@
 theme = "harbor"
-baseURL = "https://www.nullsblog.onrender.com/"
+baseURL = "http://nullbolg.netlify.app"
 languageCode = "en-us"
 title = "Null's blog"
 paginate = 3
