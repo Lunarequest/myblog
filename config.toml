@@ -31,10 +31,11 @@ disqusShortname = "null-s-blog"
   icon = "fas fa-search fa-lg"
   url = "search"
   weight = 3
-
+[params]
+favicon = "favicon.ico"
 
 [params.logo]
-  url = "icon.png" # static/images/icon.png
+  url = "icon.jpg" # static/images/icon.jpg
   width = 50
   height = 50
   alt = "Logo"
