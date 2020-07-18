@@ -139,3 +139,4 @@ I encourage to look the [docker docs](https://docs.docker.com/) and the [docker-
  — This is nullrquest sign off
 
 
+ {{ partial "comment.html" . }}
