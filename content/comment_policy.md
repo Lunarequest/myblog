@@ -1,6 +1,7 @@
 ---
 title: "comment policy"
 date: 2020-07-16T20:49:14+05:30
+disable_comments: true 
 draft: false
 ---
 
