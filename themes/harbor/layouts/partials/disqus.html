@@ -1,5 +1,4 @@
-<!--{{ if and (and (not (eq .Site.DisqusShortname "")) (not (isset .Site.Params "disable_comments")) (not (isset .Params "disable_comments"))) }}
-    <div id="disqus_thread"></div>
+{{ with .Site.DisqusShortname }}
     <script type="text/javascript">
         (function() {
             // Don't ever inject Disqus on localhost--it creates unwanted
