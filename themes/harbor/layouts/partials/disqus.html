@@ -1,4 +1,4 @@
-{{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
+{{ if (not .Params.disable_comments) }}
 <div id="disqus_thread"></div>
 <script>
 (function() {
