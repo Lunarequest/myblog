@@ -21,4 +21,3 @@ $  git submodule add https://github.com/matsuyoshi30/harbor.git themes/harbor
 ```
 with that you now have a theme. now we need to edit the `config.toml/.json/.yaml` file.the file extenstion and sytanx will be diffrent but hugo supports all of exetsions mentioned. I used the toml file but you can use whatever you prefer
 
-{{ partial "comment.html" . }}

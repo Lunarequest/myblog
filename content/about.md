@@ -2,6 +2,7 @@
 title: "About"
 date: 2020-07-15T12:56:36+05:30
 draft: false
+disable_comments: true 
 ---
 ![](/images/icon_small.jpg)
 
