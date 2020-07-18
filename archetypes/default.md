@@ -9,5 +9,3 @@ draft: true
 
 
 
-<!-- add the brackets you dumbaass -->
-{ partial "comment.html" . }
