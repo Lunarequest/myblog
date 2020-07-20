@@ -34,13 +34,14 @@ ENTRYPOINT tail -F /dev/null
 `gunicorn` is for a later step we can ignore it for now. To test if our website works. We can run the following.
 ```shell
 $ docker build . -t website
+$ docker rm website
 $ docker run -d --name website -p 8000:8000 website
 $ docker exec -it website python manage.py runserver 0.0.0.0:8000
 ```
-These will build and launch the docker container so we can test it out. Please note if you have a issue with conflicting container names run `docker rm website`. You will be able to navigate to `http://localhost:8000` and see your website running. At this point you can remove the last line ie. `ENTRYPOINT tail -F /dev/null` can be removed.
+These will build and launch the docker container so we can test it out. You will be able to navigate to `http://localhost:8000` and see your website running. At this point you can remove the last line ie. `ENTRYPOINT tail -F /dev/null` can be removed.
 
 ## The Tor Container
-Like the IRC we will be keeping the tor proxy (idk what the correct term is) in a seprate container. We will need to create a new `torrc`. Like before, you can run the following to get the `torrc` file.
+Like the IRC we will be keeping the tor proxy in a seprate container. We will need to create a new `torrc`. Like before, you can run the following to get the `torrc` file (this is assuming you are running linux, if you are not please look into your OSs configs for tor)
 ```shell
 $ sudo cp /etc/tor/torrc ./configs/torrc
 ```
@@ -54,7 +55,7 @@ Uncomment and change the second line to appeare the same as the one bellow.
 HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 website:8000
 ```
-If you are observent you might notice that the ports are diffrent in the config. This is to ensure that when a person connects using the Tor browser it will automatically connect to the website(using other ports will result in you having to supply a port with the address)
+If you are observent you might notice that the ports are weird in the config. This is to ensure that when a person connects using the Tor browser it will automatically connect to the website(using other ports will result in you having to supply a port with the address in a webbrowser like tor)
 
 ## Docker-Compose
 well here we are again. The docker compose file. This is a god send for us as instead of one massive command we have a small one.
