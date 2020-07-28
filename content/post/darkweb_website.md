@@ -1,7 +1,7 @@
 ---
 title: "How to setup Dockerised darkweb website"
 date: 2020-07-15T12:59:28+05:30
-tag: ['darkweb','docker','python','website']
+tag: [darkweb, docker, python, website]
 draft: false
 ---
 

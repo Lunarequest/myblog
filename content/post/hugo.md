@@ -1,7 +1,7 @@
 ---
 title: "How to make a hugo website"
 date: 2020-07-18T12:12:08+05:30
-tags: ['Hugo']
+tags: [Hugo]
 draft: true
 ---
 ## Background
