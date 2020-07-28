@@ -39,9 +39,24 @@ $  swapon /swapfile
 After this you will need to connect to the internet. Go through the Arch wiki if you need to use Wifi rather then a Ethernet cable. If you use Ethernet you may need to run `dhcpcd` to get a IP adress. At this point we can run the pacstarp command but pacstarp copies the mirror list from the iso. You may want to use `reflector` after installing it to get a faster download packages
 
 ```shell
-$ pacstrap /mnt base linux linux-firmware nano vim man-db man-pages  
+$ pacstrap /mnt base linux linux-firmware nano vim man-db man-pages fish
 ```
-after this you will need to run the following command to genrate a fstab file. Check it for any errors and fix them. 
+You can skip fish if you don't like the fish shell. After this you will need to run the following command to genrate a fstab file. Check it for any errors and fix them. 
 ```shell
 $ genfstab -U /mnt >> /mnt/etc/fstab
 ```
+After this you will need to chroot(change root) to the /mnt folder using this command
+```shell
+arch-chroot /mnt
+```
+After this you will need to set the the timezone info using the following command. You can also sync your hardware clock.
+
+```shell
+$ ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+$ hwclock --systohc
+```
+Next edit `/etc/locale.gen` and uncomment `en_US.UTF-8`, `UTF-8` and other needed locales.Then run `locale-gen` to genrate the required locales. After this you can set the locale confing by running
+```shell
+$ nano /etc/locale.conf
+```
+and set your locale like so `LANG=en_US.UTF-8`. Next up we will need to setup the network configs.
