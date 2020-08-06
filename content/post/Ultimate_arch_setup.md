@@ -5,7 +5,7 @@ tags: [arch, linux, secureboot, plymouth]
 draft: false
 ---
 # Background
-Recently after distro-hopping I came back to Arch linux. It was perfect for me and I really can't move to another distro without missing the AUR. After installing Arch I went through a few extra steps to add some features like secure boot(I know its not needed) and plymouth to add some fancy looks to my setup. __I am assuming you have used linux this does not and will not replace the arch wiki__.
+Recently after distro-hopping I came back to Arch linux. It was perfect for me and I really can't move to another distro without missing the AUR. After installing Arch I went through a few extra steps to add some features like secure boot(I know its not needed) and plymouth to add m to my setup. __I am assuming you have used linux this does not and will not replace the arch wiki__.
 
 ## The Arch install
 If you are seeing this after a couple of years after I publish it please follow the archwiki to have the most up to date instructions. To start with this you will need to download the [arch iso](https://www.archlinux.org/releng/releases/2020.07.01/torrent/) or create your own [ISO](https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO)
