@@ -229,3 +229,5 @@ After this you can reboot the system and you should have your theme shown when y
 
 ## Final thoughts
 I know it was a bit long but I spent a long time fixing issues and getting things working. I really enjoy arch and I hope people find this informing and enjoy setting up arch.
+
+- This is nullrquest signing off

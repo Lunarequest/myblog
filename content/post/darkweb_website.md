@@ -94,5 +94,5 @@ You will get a .onion link from the last command. __You will not be able to use 
 ### Final Notes
 I encourage to look the [docker docs](https://docs.docker.com/) and the [docker-compose docs](https://docs.docker.com/compose/). Learn how it works and become more confident with using docker. I hope you find this tutorial useful or interseting. Please note just using docker doesn't make your server safe. Please learn how to setup fire walls you can use to lock down your server. 
 
- — This is nullrquest sign off
+ — This is nullrquest signing off
 
