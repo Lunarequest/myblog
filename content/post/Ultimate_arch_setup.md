@@ -166,7 +166,7 @@ Now we need to sign the kernels and efi binaries.
 $ sudo sbsign --key db.key --cert db.crt --output /boot/vmlinuz-linux /boot/vmlinuz-linux
 $ sudo sbsign --key db.key --cert db.crt --output esp/EFI/BOOT/BOOTX64.EFI esp/EFI/BOOT/BOOTX64.EFI
 ```
-You will need to do this everytime you update the kernel or bootloader. I used a pacman hook to do this.
+You will need to do this everytime you update the kernel or bootloader. I used a pacman hook to do this. I also moved all the keys to /etc/secure-boot
 ```shell
 $ sudo nano /etc/pacman.d/hooks/99-secureboot.hook
 ```
@@ -188,7 +188,7 @@ Depends = findutils
 Depends = grep
 ```
 You should also copy all the keys to the /boot partion.
-Next you need to put your  firmware into setup mode and enroll the keys. You can follow this guide on how to [enroll the keys](www.rodsbooks.com/efi-bootloaders/controlling-sb.html#setuputil).
+Next you need to put your  firmware into setup mode and enroll the keys. You can follow this guide on how to enroll the keys www.rodsbooks.com/efi-bootloaders/controlling-sb.html#setuputil.
 
 ## Plymouth
 Fist we need to install a aur helper. I prefer yay but you can use any helper or manully git clone and `makepkg` each package on your own.
