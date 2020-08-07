@@ -2,7 +2,7 @@
 title: "Arch install automation"
 date: 2020-08-06T09:12:49+05:30
 tags: [arch, automation, ansible]
-draft: true
+draft: False
 ---
 ## background
 I have a OEM desktop that I use as a headless(without a display) server. I found that I nuke this server very often when I mess something up and have to reinstall. With my recent move switching to Arch as the os running on it. Reinstalling became a hassel. This post will take a diffrent approch. Rather then give instructions on how to make/build everything. I will talk about what I did and why I did that.
