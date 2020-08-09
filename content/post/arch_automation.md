@@ -5,7 +5,7 @@ tags: [arch, automation, ansible]
 draft: False
 ---
 ## background
-I have a OEM desktop that I use as a headless(without a display) server. I found that I nuke this server very often when I mess something up and have to reinstall. With my recent move switching to Arch as the os running on it. Reinstalling became a hassel. This post will take a diffrent approch. Rather then give instructions on how to make/build everything. I will talk about what I did and why I did that.
+I have a OEM desktop that I use as a headless(without a display) server. I found that I nuke this server very often when I mess something up and have to reinstall. With my recent move switching to Arch as my primary operating system. Reinstalling became a hassel. This post will take a diffrent approch. Rather then give instructions on how to make/build everything. I will talk about what I did and why I did that.
 
 ## The plan
 First I need to make a custom iso. This iso had to boot regularly some how tell my laptop its ip and finally get sshed into by ansible which will allow ansible to install arch for me. I broke the problem down into stages
@@ -36,7 +36,7 @@ def send_ip(ip):
     print(r)
     print(r.text)
 ```
-currently the url is set to localhost but you can change it to the ip of your system. This is where my first road block was hit. I orginally planed to use systemd to load up and run the program for me. Sadly the systems ip isn't set until DHCP requests are made bu `dhcpcd`. So I moved to plan b using the zshrc. At this point I spent 2 days lerning, making and testing a custom arch iso. At this point I realised that I could tackel stage 2 with the iso.
+currently the url is set to localhost but you can change it to the ip of your system. This is where my first road block was hit. I orginally planed to use systemd to load up and run the program for me. Sadly the systems ip isn't set until the DHCP negtations are run made by `dhcpcd`. So I moved to plan b using the zshrc. At this point I spent 2 days lerning, making and testing a custom arch iso. At this point I realised that I could tackel stage 2 with the iso. The only side effect present is when you ssh you will not see a propmt on the iso.
 
 ## Stage 2
 A password isn't the only way to login to a remote host using ssh. The alterntive more secure method is a SSH key. A key pair(one private and one public) can be made fairly quickly. I recomand follow the guide by github on how to set it up. So I add a section in the iso to copy my key into the iso. allowing me to login and execute commands as root without ever inputing the password.

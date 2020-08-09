@@ -7,126 +7,21 @@ draft: false
 # Background
 Recently after distro-hopping I came back to Arch linux. It was perfect for me and I really can't move to another distro without missing the AUR. After installing Arch I went through a few extra steps to add some features like secure boot(I know its not needed) and plymouth to add m to my setup. __I am assuming you have used linux this does not and will not replace the arch wiki__.
 
-## The Arch install
-If you are seeing this after a couple of years after I publish it please follow the archwiki to have the most up to date instructions. To start with this you will need to download the [arch iso](https://www.archlinux.org/releng/releases/2020.07.01/torrent/) or create your own [ISO](https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO)
-If you make your own iso you configure it to use secureboot. If you are like me and don't want to make a custom iso disbale secure boot and boot the arch iso. You will need to make a bootable usb or cdrom.
-
-Once you have booted this ISO you will need to install arch. I will be writing how I installed Arch you can do it however you feel comfortable I also assume you use systemd as your bootloader. If you use grub or anyother bootloader refer to the wiki on how to set things up for the bootloader
-
-I have used the following partition map.
-```
-| Mount point | Partition | Partition Type            | Suggested size          |
-|-------------|-----------|---------------------------|-------------------------|
-| /mnt/boot   | /dev/sda1 | EFI system partition type | 512MB                   |
-| /mnt        | /dev/sda2 | Linux x86-64 root (/)     | Remainder of the device |
-|             |           |                           |                         | 
-```
-I use ext4 for the root partion and vfat for the boot partion.The more knowledgeable might of you have noticed that there is no swap partition That is because I used a swapfile. Making a swapfile is super simple and can be done at this point but before you do you need to format the partitions. These commands assume you use ext4. If you use btrfs you need to turn off CoW for the swapfile
-
+## The arch install. 
+This is the most difficult part of arch.I will not be making a guide for it as Arch linux changes very often and the best source is the Arch wiki. I know its scary but put in the hard work and you will be rewarded with a arch install. 
+## SwapFiles
+swapfiles are like swap partions but rather then use a partion it uses a file. Usually this is `/swapfile`. To start with you will need to make a file. If you use btrfs you will need to add set some permsions. 
 ```shell
-$  dd if=/dev/zero of=/mnt/swapfile bs=1M count=512 status=progress
+$ sudo dd if=/dev/zero of=/swapfile bs=1M count=512 status=progress
 ```
-you will want to change count to the size of swap file you require. Next you will want to change the file permission to prevent the swapfile from being read by a text editor
+Change count to the size of ram you have if you want to hibernate. Next up we need to remove the read permissons on the file. Its supersingly easy to change this. `sudo chmod 600 /swapfile` will allow remove the read/write permssions. Next  we need to format the file to make it a swap device. This step is very simple.
 ```shell
-$ chmod 600 /swapfile
+$ sudo mkswap /swapfile
 ```
-After this you can format and activate the swapfile like a swap partition
-```shell
-$  mkswap /swapfile
-$  swapon /swapfile
+Next you should activate the swap device like this `sudo swapon /swapfile`. Finally you should edit the fstab file to ensure its actived on boot. You can edit the `/etc/fstab` file with you prefered text editor. Add the following line at the end and when you reboot your system should activate the swap device.
 ```
-After this you will need to connect to the internet. Go through the Arch wiki if you need to use Wifi rather then a Ethernet cable. If you use Ethernet you may need to run `dhcpcd` to get a IP adress. At this point we can run the pacstarp command but pacstarp copies the mirror list from the iso. You may want to use `reflector` after installing it to get a faster download packages
-
-```shell
-$ pacstrap /mnt base linux linux-firmware nano vim man-db man-pages fish sudo
+/swapfile none swap defaults 0 0
 ```
-You can skip fish if you don't like the fish shell. After this you will need to run the following command to genrate a fstab file. Check it for any errors and fix them. 
-```shell
-$ genfstab -U /mnt >> /mnt/etc/fstab
-```
-After this you will need to chroot(change root) to the /mnt folder using this command
-```shell
-arch-chroot /mnt
-```
-After this you will need to set the the timezone info using the following command. You can also sync your hardware clock.
-
-```shell
-$ ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
-$ hwclock --systohc
-```
-Next edit `/etc/locale.gen` and uncomment `en_US.UTF-8`, `UTF-8` and other needed locales.Then run `locale-gen` to genrate the required locales. After this you can set the locale confing by running
-```shell
-$ nano /etc/locale.conf
-```
-and set your locale like so `LANG=en_US.UTF-8`. Next up we will need to setup the network configs. You will need to create a  hostname. __This will show up in certain prompts so chose wisely...__
-
-```shell
-nano /etc/hostname
-```
-Enter your hostname and save the file. Next up we need to create a hosts file. This assgins IPs to terms like localhost.
-
-```shell
-$ nano /etc/hosts
-```
-Copy the following into the file and save it
-```hosts
-127.0.0.1	localhost
-::1		localhost
-127.0.1.1	myhostname.localdomain	myhostname
-```
-Replace `127.0.1.1` with a static IP if you whish to use that over a dynamicly assinged IP.
-At this point we need to install a bootloader. I chose systemd because even though setting it up is complex it is more powerful than any other bootloader(in my opinon). To kick of the process run 
-```shell 
-$  bootctl install
-```
-Run 
-```shell
-$ nano /boot/loader/loader.conf
-```
-and copy the following in your text editor and save the file.
-```
-default  arch
-timeout  0
-console-mode keep
-editor   no
-```
-You can keep change the `editor  no` to `editor yes` if your system doesn't run the risk of being phsyically attacked. Eh who am I kidding if you need secure boot you sure as hell can't have people edit the bootloader configs.Next up we need to create a arch.conf. 
-```shell
-$ nano //boot/loader/entries/arch.conf
-```
-Add the following lines. We will revist this later.
-```
-title   Arch Linux
-linux   /vmlinuz-linux
-initrd  /initramfs-linux.img
-options root="UUID=your uuid" rw 
-``` 
-to get the uuid you can run `blkid` and redirct the input to the file.
-Next up we need to install a DE. I used Kde plasma but you can use anything you want to. Some of the later steps will need to be changed. Installing kde plasma is fairly simple. Depeneding on the amount of configartion you want to do you can chose how many packages you want. I choose all becuase I wasn't intreasted in heavy configaration. 
-```shell
-$ pacman -S plasma
-```
-
-After this we need to allow sddm to start up on boot. The following command should allow this to happen
-```shell
-systemctl enable sddm
-```
-After this you need to create a unprivallged account
-```shell 
-$ useradd -m -G -s /usr/bin/fish username
-```
-feel free to change the login shell to any one you prefer. Next up we need to set a password for the root and newly created account
-```shell
-$ passwd
-$ passwd username
-```
-After this follow this [guide](https://linuxhint.com/add_users_arch_linux/) and setup the sudoers file. 
-At this point we could reboot but there are a few things we should add before we reboot.
-```shell 
-$ pacman -S git konsole firefox
-```
-you can reboot now and hopefully you have a working arch install. If you don't. Start again.
-
 ## Secure boot
 I am using custom keys and have wiped the microsoft keys of my system for better security. If you want to keep these keys you will need to use preboot/shim. Look into the arch wiki on how to use them.
 To start off we need to install `efitools`
@@ -227,6 +122,29 @@ $ sudo  plymouth-set-default-theme -R theme
 Add this to the options line in the arch.conf in the /boot partition. `quiet splash loglevel=3 rd.udev.log_priority=3 vt.global_cursor_default=0`
 After this you can reboot the system and you should have your theme shown when you boot up.
 
+
+## Hibrenation
+Hibrenation is a ~~usefull~~ requirment on laptops. When a laptop enters hibernation it saves the contents of ram to the hdd/sdd saving power but speeding up boot time. On arch linux you need to add kernel hooks and parameters to tell the system on how to resume. To start off we can add the mkinitcpio hook. You should open the `/etc/mkinitcpio.conf` file in a text editor and updated the hooks.
+
+```conf
+HOOKS=(base udev plymouth autodetect modconf block filesystems resume keyboard fsck)
+```
+The hooks should look like this now. Next we need to add a kernel parameter so the kernel knows where to resume from. However before this we need to find the "offset" of the swapfile. To do this we can use `filefrag`.
+```shell
+Filesystem type is: ef53
+File size of /swapfile is 8388608000 (2048000 blocks of 4096 bytes)
+ ext:     logical_offset:        physical_offset: length:   expected: flags:
+   0:        0..    6143:     321536..    327679:   6144:            
+   1:     6144..   12287:     403456..    409599:   6144:     327680:
+   2:    12288..   14335:     466944..    468991:   2048:     409600:
+   3:    14336..   16383:     522240..    524287:   2048:     468992:
+   4:    16384..   47103:     559104..    589823:  30720:     524288:
+   5:    47104..   49151:     673792..    675839:   2048:     589824:
+   6:    49152..   59391:     677888..    688127:  10240:     675840:
+   7:    59392..   83967:     696320..    720895:  24576:     688128:
+   8:    83968..   86015:     735232..    737279:   2048:     720896:
+```
+You should look for the first physical_offset value. In my case it was 321536. Now we are ready to add our kernel parameters. There are 2 parameters we need to add the `resume` parameter and the `resume_offset` parameter. For  the resume parametere you need to use the UUID of the partion the swapfile is on. your parameter should look like this.`resume=UUID=19a7a7b7-04d9-4abc-b1bf-8d53ea7de04e resume_offset=321536`
 ## Final thoughts
 I know it was a bit long but I spent a long time fixing issues and getting things working. I really enjoy arch and I hope people find this informing and enjoy setting up arch.
 
