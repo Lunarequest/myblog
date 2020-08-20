@@ -47,4 +47,4 @@ This was what held me back for a short while(okay it wasn't a short while it was
 
 I discorved you dont give `grub-install` a partion but rather the entier disk like `grub-install /dev/sda`. After this the install was pretty smooth sailing. Until I hit the user creation section. Currently I haven't figured out how to fix the issue but the one solution I am trying to get working is `chpasswd`. If someone figures out how it works please do hit me up. I really would like to solve it. I  will be uploading everything to my github so anyone can use it. One last thing. If you want to install arch do it yourself. Do your research and it will pay off. Installing arch teachs you alot about how linux works. Also don't use arch as your first Linux distro use linux mint or pop os
 
-- This is nullrequest signing off
+  — This is nullrequest signing off

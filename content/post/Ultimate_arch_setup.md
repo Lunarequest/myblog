@@ -148,4 +148,4 @@ You should look for the first physical_offset value. In my case it was 321536. N
 ## Final thoughts
 I know it was a bit long but I spent a long time fixing issues and getting things working. I really enjoy arch and I hope people find this informing and enjoy setting up arch.
 
-- This is nullrquest signing off
+ — This is nullrquest signing off 

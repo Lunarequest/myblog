@@ -43,4 +43,5 @@ favicon = "favicon.ico"
   alt = "Logo"
 [taxonomies]
   category = "categories"
+  series = "series"
   tag = "tags"
