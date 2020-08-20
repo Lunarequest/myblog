@@ -4,24 +4,24 @@ date: 2020-07-18T16:20:25+05:30
 draft: False
 disable_comments: true
 ---
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-  function onSubmit(token) {
-    document.getElementById("demo-form").submit();
-  }
-</script>
 
-
-<form action="https://getform.io/f/9aa7c3d6-7c0c-4cd9-9fc6-60f5fa38c084" method="POST">
-
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <input type="text" name="message">
-  <button type="submit">Send</button>
-
+<form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+  <p>
+    <label>Your Name: <input type="text" name="name"></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email"></label>
+  </p>
+  <p>
+    <label>Subject: <input type="text" name="Subject"></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="Message" rows=5></textarea></label>
+  </p>
+  <p>
+    <input type="submit" value="send message">
+  </p>
+  <p>
+  <div data-netlify-recaptcha="true"></div>
+  </p>
 </form>
-        
-<button class="g-recaptcha" 
-        data-sitekey="reCAPTCHA_site_key" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
