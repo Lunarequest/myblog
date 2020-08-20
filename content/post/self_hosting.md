@@ -21,6 +21,7 @@ I've broken this move down to three stages.
 1. rework
 2. custom tooling
 3. deploy
+
 Stage 1 is what I am working on right now. currently alot of the website relies on netlify to work. like in the contact form. I am working on steadly removing netlify from the equation. With  this post you will see the biggest change so far. The contact form will no longer use netify. Over time this will extend to  the rest of the webiste. Stage 2 will invlove writing scripts to automate everything and stage 3 is testing everything while deployinig it. 
 
 I hope you enjoyed this shorter then normal post. I will be back in a few weeks with another post hopefully entering stage 2.
