@@ -1,0 +1,10 @@
+<!-- layouts/partials/series.html -->
+{{ $taxonomy := "series" }} {{ with .Param $taxonomy }}
+<ul>
+    {{ range $index, $series:= . }} {{ with $.Site.GetPage -}}
+    <li>
+        <a href="{{ .Permalink }}">{{ $series | urlize }}</a>
+    </li>
+    {{- end -}} {{- end -}}
+</ul>
+{{ end }}

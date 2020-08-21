@@ -1,0 +1,8 @@
+<!-- layouts/taxonomy/serise.html -->
+<ul>
+    {{ range .Data.Pages }}
+    <li>
+        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
