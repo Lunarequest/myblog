@@ -3,7 +3,7 @@ title: "Self hosting part 2"
 date: 2020-08-29T15:21:57+05:30
 series: [movingtomyserver]
 tags: [self_hosting, hugo]
-draft: true
+draft: false
 ---
 
 ## Background
