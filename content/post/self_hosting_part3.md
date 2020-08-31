@@ -5,7 +5,7 @@ series: [movingtomyserver]
 tags: [self_hosting, hugo]
 draft: true
 ---
-hello, hello and welcome back to this series
+hello, hello and welcome back to this series I guess I cheated
 
 
 
