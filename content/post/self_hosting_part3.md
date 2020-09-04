@@ -5,9 +5,7 @@ series: [movingtomyserver]
 tags: [self_hosting, hugo]
 draft: true
 ---
-hello, hello and welcome back to this series I guess I cheated
 
+## Introduction
 
-
-
-
+Hello, hello and welcome back to this series I guess I cheated here. I may have  been working on multiple stages at the same time so yeah.... I did make progress tho.
