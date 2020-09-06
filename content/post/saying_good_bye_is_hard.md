@@ -4,8 +4,7 @@ date: 2020-09-06T10:42:16+05:30
 tags: [fin]
 draft: false
 ---
-
-before i continue i have to say i am sorry. Bye the time you read this i will most likly be dead. They'll say it was  sucide and it is. life is a rigged game. I am sick of always losing. I am sick of being useless. I have been living a lie for most of my life my parents have put me down for the last time. over the past year i met some people who really changed me for the better. I'd like to say sorry to them again, I know what i will do is selfish but this is me say "fuck you" to the world. my last act. I am going to be saying some stuff for to the people who i care about.
+Saying goodbye is always hard. its never "easy" throughout our lives we will say goodbye many,many times. it hurts to say this but its tie for me to say good bye. if you are my friends who are reading this. i am sorry i really i am. Bye the time you read this i will most likly be dead. They'll say it was  sucide and it is. life is a rigged game. I am sick of always losing. I am sick of being useless. I have been living a lie for most of my life my parents have put me down for the last time. over the past year i met some people who really changed me for the better. I'd like to say sorry to them again, I know what i will do is selfish but this is me say "fuck you" to the world. my last act. I am going to be saying some stuff for to the people who i care about.
 
 ## To reid
 
@@ -13,7 +12,7 @@ you were my brother in arms. you helped me go through so much. i am sorry i won'
 
 ## To eve
 
-you were like a mother too me. telling me when to let go comforting me when my real family wouldn't. you really are one of a kind senpai. You shouldn't pay me i am in deted to you for life. you helped me when i was down brought me out of a dark place. I am sorry i wasn't stronger. I hope you and cacti can meet soon. you guys  really deserve to be togather. I need to ask you a favor tho. please keep my blog up. the source code is up at <https://github.com/advaithm/myblog> please keep it up until the domain expires.
+you were like a mother too me. telling me when to let go comforting me when my real family wouldn't. you really are one of a kind senpai. You shouldn't pay me i am in deted to you for life. you helped me when i was down brought me out of a dark place. I am sorry i wasn't stronger. I hope you and cacti can meet soon. you guys  really deserve to be togather. I need to ask you a favor. please keep my blog up its my mark upon this world. the source code is up at <https://github.com/advaithm/myblog> please keep it up until the domain expires.
 
 ## To jothi
 
