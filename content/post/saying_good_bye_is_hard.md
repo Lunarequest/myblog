@@ -2,7 +2,7 @@
 title: "Saying goodbye is hard"
 date: 2020-09-06T10:42:16+05:30
 tags: [fin]
-draft: true
+draft: false
 ---
 
 before i continue i have to say i am sorry. Bye the time you read this i will most likly be dead. They'll say it was  sucide and it is. life is a rigged game. I am sick of always losing. I am sick of being useless. I have been living a lie for most of my life my parents have put me down for the last time. over the past year i met some people who really changed me for the better. I'd like to say sorry to them again, I know what i will do is selfish but this is me say "fuck you" to the world. my last act. I am going to be saying some stuff for to the people who i care about.
