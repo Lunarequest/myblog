@@ -4,7 +4,7 @@ date: 2020-09-06T10:42:16+05:30
 tags: [fin]
 draft: false
 ---
-Saying goodbye is always hard. its never "easy" throughout our lives we will say goodbye many,many times. it hurts to say this but its tie for me to say good bye. if you are my friends who are reading this. i am sorry i really i am. Bye the time you read this i will most likly be dead. They'll say it was  sucide and it is. life is a rigged game. I am sick of always losing. I am sick of being useless. I have been living a lie for most of my life my parents have put me down for the last time. over the past year i met some people who really changed me for the better. I'd like to say sorry to them again, I know what i will do is selfish but this is me say "fuck you" to the world. my last act. I am going to be saying some stuff for to the people who i care about.
+Saying goodbye is always hard. its never "easy" through out our lives we will say goodbye many,many times. it hurts to say this but its time for me to say goodbye. if you are my friends who are reading this. i am sorry i really i am. Bye the time you read this i will most likly be dead. They'll say it was  sucide and it is. life is a rigged game. I am sick of always losing. I am sick of being useless. I have been living a lie for most of my life my parents have put me down for the last time. over the past year i met some people who really changed me for the better. I'd like to say sorry to them again, I know what i will do is selfish but this is me say "fuck you" to the world. my last act. I am going to be saying some stuff for to the people who i care about.
 
 ## To reid
 
