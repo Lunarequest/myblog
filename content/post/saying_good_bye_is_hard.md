@@ -13,7 +13,7 @@ you were my brother in arms. you helped me go through so much. i am sorry i won'
 
 ## To eve
 
-you were like a mother too me. telling me when to let go comforting me when my real family wouldn't. you really are one of a kind senpai. You shouldn't pay me i am in deted to you for life. you helped me when i was down brought me out of a dark place. I am sorry i wasn't stronger. I hope you and cacti can meet soon. you guys  really deserve to be togather. I need to ask you a favor. please keep my blog up its my mark upon this world. the source code is up at <https://github.com/advaithm/myblog> please keep it up until the domain expires.
+you were like a mother too me. telling me when to let go comforting me when my real family wouldn't. you really are one of a kind senpai. You shouldn't pay me i am in deted to you for life. you helped me when i was down brought me out of a dark place. I am sorry i wasn't stronger. I hope you and cacti can meet soon. you guys  really deserve to be togather.
 
 ## To jothi
 
@@ -24,3 +24,5 @@ you introduced me to the people i call my family. without them i wouldn't have l
 to start of with i need to say __This isn't you fault__ no matter what people say. you were my first and only love. yet i know nothing about you. i wish i could have gotten to know you better. i had this silly dream of comming to romania and then driving to hungary with reid. I know its silly but i thought maybe that would make you see how much you mean to me. In the end i felt like zero two torn away from her love. I wish i could have called you darling once. maybe i could have in a diffrent world.
 
 with this i reach the end of this message. I love you guys. you helped me through so much. I am sorry i couldn't help you more.
+
+I  guess i grew a pair
