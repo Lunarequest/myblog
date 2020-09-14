@@ -34,15 +34,14 @@ os.system("echo 'finshed running thread'")
 
 @app.route("/", methods=["GET", "POST"])
 def update():
-if request.method == "GET":
-return "Your not supposed to be here"
-elif request.method == "POST":
-elif request.method == "POST":
-key = request.form["key"]
-if key == os.environ.get("key"):
-update_thread = threading.Thread(target=update_static)
-update_thread.start()
-return "Hello Octocat"
+    if request.method == "GET":
+        return "Your not supposed to be here"
+    elif request.method == "POST":
+        key = request.form["key"]
+        if key == os.environ.get("key"):
+            update_thread = threading.Thread(target=update_static)
+            update_thread.start()
+    return "Hello Octocat"
 ```
 
 As you can see its pretty sleek. Using a web hook you can get GitHub to send you a update post request with any value to your server. Its pretty effective at replicating what happened in netlify setup except there they used git hubs API. Honestly if I wasn't so confused by docs I would have used the API.
