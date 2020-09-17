@@ -34,6 +34,7 @@ canonifyURLs = true
   url = "search"
   weight = 3
 [params]
+mainSections = ["post"]
 favicon = "favicon.ico"
 
 [params.logo]
@@ -41,6 +42,13 @@ favicon = "favicon.ico"
   width = 50
   height = 50
   alt = "Logo"
+  
+
+[params.social.instagram]
+    name= "instagram"
+    url="https://www.instagram.com/nullrequest_/"
+    icon="fab fa-instagram fa-2x"
+
 [taxonomies]
   category = "categories"
   series = "series"

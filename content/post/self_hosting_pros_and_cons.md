@@ -2,7 +2,7 @@
 title: "Self hosting pros and cons"
 date: 2020-09-14T11:46:10+05:30
 tags: [selfhosting]
-draft: true
+draft: false
 ---
 
 If you are reading this blog on netlify please head to our new domain nullrequest.com. At the start of october the netlify subdomain will be taken down. In this post I wanted to talk about why and why not you should self host. When I decided to self host it wasn't at the drop of a hat. I spent a long time thinking about if it was worth moving to my own hardware. In the end I moved to my own hardware because I had a lot of projects I wanted to do and in the end the costs of hosting online would have ended up being too much for me,
@@ -25,3 +25,5 @@ Anything and everything exposed to the internets will become a target for any ha
 
 2. ISPs
 Some internet service providers(ISPs) will want you to pay for a bussines connection which can be more expensive then hosting online. At the end of the day this one is down to personal prefrance. If you don't mind risking a knock on the door asking you to stop you can do pretty much what ever you want.
+
+These are some of the pros and cons of self hosting. I hope these could help you find a better understanding of the risks assosiated with self hosting.
