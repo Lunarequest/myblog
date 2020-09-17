@@ -34,14 +34,13 @@ canonifyURLs = true
   url = "search"
   weight = 3
 [params]
-mainSections = ["post"]
-favicon = "favicon.ico"
-
-[params.logo]
-  url = "icon.jpg" # static/images/icon.jpg
-  width = 50
-  height = 50
-  alt = "Logo"
+  mainSections = ["post"]
+  favicon = "favicon.ico"
+  [params.logo]
+    url = "icon.jpg" # static/images/icon.jpg
+    width = 50
+    height = 50
+    alt = "Logo"
   
 
 [params.social.instagram]
