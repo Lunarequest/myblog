@@ -9,7 +9,7 @@ footnoteReturnLinkContents = "^"
 disqusShortname = "null-s-blog"
 enableRobotsTXT = true
 canonifyURLs = true
-
+googleAnalytics = UA-178265362-1
 [permalinks]
     posts = "/:filename"
 
