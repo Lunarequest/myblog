@@ -52,6 +52,11 @@ googleAnalytics = "UA-178265362-1"
   url="mailto:advaith.madhukar@gmail.com"
   icon="fas fa-envelope-open-text fa-2x"
 
+[[params.social]]
+  name="rocket chat"
+  url="https://rocket.nullrequest.com/"
+  icon="fab fa-rocketchat fa-2x"
+
 [taxonomies]
   category = "categories"
   series = "series"
