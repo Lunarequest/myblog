@@ -42,11 +42,15 @@ googleAnalytics = "UA-178265362-1"
     height = 50
     alt = "Logo"
   
+[[params.social]]
+  name= "instagram"
+  url="https://www.instagram.com/nullrequest_/"
+  icon="fab fa-instagram fa-2x"
 
-[params.social.instagram]
-    name= "instagram"
-    url="https://www.instagram.com/nullrequest_/"
-    icon="fab fa-instagram fa-2x"
+[[params.social]]
+  name="mail"
+  url="mailto:advaith.madhukar@gmail.com"
+  icon="fas fa-envelope-open-text fa-2x"
 
 [taxonomies]
   category = "categories"
