@@ -37,7 +37,7 @@ googleAnalytics = "UA-178265362-1"
   mainSections = ["post"]
   favicon = "favicon.ico"
   [params.logo]
-    url = "icon.jpg" # static/images/icon.jpg
+    url = "icon.webp" # static/images/icon.jpg
     width = 50
     height = 50
     alt = "Logo"
