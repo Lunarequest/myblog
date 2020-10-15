@@ -8,6 +8,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 disqusShortname = "null-s-blog"
 enableRobotsTXT = true
+canonifyURLs = true
 [permalinks]
     posts = "/:filename"
 
