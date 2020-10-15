@@ -152,6 +152,24 @@ type: myarchivetype
 +++
 ```
 
+#### Override CSS
+
+If you want to override CSS, add `customCSS` param to your config.toml.
+
+```
+[params]
+  customCSS = ["/css/custom.css"] # in case you use `/static/css/custom.css`
+```
+
+#### Enable Google Analytics when running as server
+
+If you want to enable google analytics when running hugo as server, add `enableGoogleAnalytics` param to your config.toml.
+
+```
+[params]
+  enableGoogleAnalytics = true
+```
+
 ## Frontmatter example
 
 ```
