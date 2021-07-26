@@ -2,7 +2,7 @@
 title: "The wacky world of programming. Shenanigans that probably happened in your life time"
 date: 2021-03-18T12:22:27+05:30
 tags: [shenanigans]
-draft: false
+draft: true
 ---
 The world of programming is no stranger to feuds, after all we are all just human. Often times big events that broke parts of the internet often go unnoticed by the wider public. In this article I'm going to give you some insight into the wacky would of progammers everything from how a spat between a company and a small programmer almost broke the internet to how to power houses of the linux world clashed.
 
