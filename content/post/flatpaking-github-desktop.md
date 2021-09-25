@@ -1,11 +1,13 @@
 ---
-title: "My Adventure Flatpaking Github Desktop"
-date: 2021-07-19T18:56:09+05:30
+title: "My Adventure Flatpaking Github Desktop P1"
+date: 2021-09-25T18:56:09+05:30
 tags: [flatpak, github-desktop]
 draft: true
 ---
 
-Flatpak is a linux distribution agnostic package format. It works on almost any linux distribution with little to work beyond building it. In may this year I gave a friend of mine a open offer, name one app and I'll flatpak it. This was just after I had created a flatpak for GitAhead another git manager similar to Github Desktop.
+Its been a while since I've last posted but I have returned with the story of my work on the github desktop flatpak. If you haven't figured out by the title this is going to be a 2 parter. The first part(what you're reading now) is going to be up to submitting the flatpak to [flathub](https://flathub.org). The second part will be about fixing issues after getting on flathub. 
+
+Well lets start with what a "flatpak" is. A flatpak is a linux distribution agnostic package format. It works on almost any linux distribution with little to work beyond building or installing it. In may this year I gave a friend of mine a open offer, name one app and I'll flatpak it. This was just after I had created a flatpak for GitAhead another git manager similar to Github Desktop.
 
 Naively I thought it shouldn't be hard to package it, after all I've had experience turning another git manager into a flatpak. I was wrong, very very wrong. When I started the first thing I did was check if someone else was working on a flatpak, if you are planing on flatpaking an app make sure no one else is doing it as well, if someone else is you should consider contributing to the effort 
 
