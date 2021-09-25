@@ -11,7 +11,7 @@ Naively I thought it shouldn't be hard to package it, after all I've had experie
 
 in late 2020 Damián Nohales had attempted to do this but failed due to issues the underlying flatpak. I myself knew about these issues from working on another flatpak. The issue stems from electrons flatpak being a suid(Set Uid) binary that can become root on start. Flatpak blocks this due to security issues. There are 2 ways to fix this. The first one is to launch the application with the flag `--nosandbox` which tends to impact the security of the application.
 
-The other smarter method is zypak a reimplementation of the chromium/electron sandbox that doesn't require disabling the sandbox. Using this knowledge I was able to modify Damián Nohales attempt at a flatpak to attempt to get it to run. I was able to update to the latest release. Right away a new issue cropped up, I couldn't login into github desktop. I wasn't able to fix this issue until recently.
+The other smarter method is zypak a reimplementation of the chromium/electron sandbox that doesn't require disabling the sandbox. Using this knowledge I was able to modify Damián's attempt at a flatpak to attempt to get it to run. I was able to update to the latest release. Right away a new issue cropped up, I couldn't login into github desktop. I wasn't able to fix this issue until recently.
 
 it wasn't until june where i started working on this again. I attempted to bump to the latest release things broke hard, first I needed to update the node version. Damián had used node 10 which now was incompatible. I ended up going with node 14 instead. After a day of getting thing working again I had hit a new issue. At some point a new dependency was added. 
 
@@ -20,7 +20,7 @@ it wasn't until june where i started working on this again. I attempted to bump 
 
 The issue with logins, it turns out `%U` being omitted from a desktop file can ruin everything. A desktop file is in simple terms how a linux distro knows information such as what icon an app uses, the executable it uses etc. `%U` tells the os when someone launches this with the desktop file pass the arguments to the executable. Adding these 2 characters solved the major issue preventing testing of the flatpak.
 
-I began adding flatpak sepcific functionality, support for spawning programs outside the sandbox, fixing issues with trashing files(this technically isn't fixed but the issue is on the portal side not mine). After this I managed to get it on flathub, but that was not the end of my woes with github desktop but that's a post for another time.
+I began adding flatpak specific functionality, support for spawning programs outside the sandbox, fixing issues with trashing files(this technically isn't fixed but the issue is on the portal side not mine). After this I managed to get it on flathub, but that was not the end of my woes with github desktop but that's a post for another time.
 
 -- signing off
 
