@@ -15,10 +15,13 @@ The other smarter method is zypak a reimplementation of the chromium/electron sa
 
 it wasn't until june where i started working on this again. I attempted to bump to the latest release things broke hard, first I needed to update the node version. Damián had used node 10 which now was incompatible. I ended up going with node 14 instead. After a day of getting thing working again I had hit a new issue. At some point a new dependency was added. 
 
-`node-detect-arm64-translation` this one dependency stumped me for weeks. Eventually I asked Brendan Forster the maintainer of the linux fork of Github desktop what it did and if I could "patch it out". After getting the okay, I wrote a patch removing it completely. It was ugly but did its job allowing me to continue.
+`node-detect-arm64-translation` this one dependency stumped me for weeks. Eventually I asked Brendan Forster the maintainer of the linux fork of Github desktop what it did and if I could "patch it out". After getting the okay, I wrote a patch removing it completely. It was ugly but did its job allowing me to continue. The yarn genrator was later update to actually setup the repo as a tarball for yarn allowing us to drop the patches.
 
-The issue with logins, it turns out `%U` being omitted from a desktop file can ruin everything. A desktop file is in simple terms how a linux distro knows information such as what icon an app uses, the executable it uses etc. `%U` tells the os when someone launches this with the desktop file pass the arguments to the executable. Adding this fixed a lot of issues.
 
-Eventually I had to start adding flatpak specific behaviour, Brendan was awesome and helped me take a lot of the patches required to run upstream reducing the development burden that I faced. Maintaining patch sets is a lot of work even a simple 5 line change can become difficult with every update. 
+The issue with logins, it turns out `%U` being omitted from a desktop file can ruin everything. A desktop file is in simple terms how a linux distro knows information such as what icon an app uses, the executable it uses etc. `%U` tells the os when someone launches this with the desktop file pass the arguments to the executable. Adding these 2 characters solved the major issue preventing testing of the flatpak.
 
-Currently there are 4 patches, 1 has already been upstreamed another will be soon. The other 2 are minor patches which should be fairly easy to maintain. With help from upstream maintaining this flatpak should be fairly easy.
+I began adding flatpak sepcific functionality, support for spawning programs outside the sandbox, fixing issues with trashing files(this technically isn't fixed but the issue is on the portal side not mine). After this I managed to get it on flathub, but that was not the end of my woes with github desktop but that's a post for another time.
+
+-- signing off
+
+Nullrequest
