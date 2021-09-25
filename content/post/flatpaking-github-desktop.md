@@ -1,5 +1,5 @@
 ---
-title: "My Adventure Flatpaking Github Desktop P1"
+title: "My Adventure Flatpaking Github Desktop Pt1"
 date: 2021-09-25T18:56:09+05:30
 tags: [flatpak, github-desktop]
 draft: true
