@@ -2,7 +2,7 @@
 title: "My Adventure Flatpaking Github Desktop Pt1"
 date: 2021-09-25T18:56:09+05:30
 tags: [flatpak, github-desktop]
-draft: true
+draft: false
 ---
 
 It's been a while since I've last posted but I have returned with the story of my work on the Github desktop Flatpak. If you haven't figured out by the title this is going to be a two-parter. The first part(what you're reading now) is going to be up to submitting the Flatpak to [flathub](https://flathub.org). The second part will be about fixing issues after getting on flathub. 
