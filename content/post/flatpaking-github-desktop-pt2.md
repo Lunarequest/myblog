@@ -17,7 +17,7 @@ ioctl errors if you have run into them before are really cryptic, I ended up add
 
 Gnome mail used GPG for some functionality and hence used it in the flatpak, I attempted model the flatapk around it using `gpg-agent` and `pinentry` in the flatpak to interact with the host, at this poin I didn't know about the issues I would face using this model. Right away one of the issues that stood out was if the key had a password it would not work. 
 
-For many weeks I pondered on the solution, until one day while being utterly confused about it in the flatpak matrix(I highly encourage anyone facing issues flatpaking an app to as on the matrix). Github user tommytran732 pointed out that adding `--filesystem=xdg-run/gnupg:ro` and dropping pinentry from the flatpak fixed the issues.
+For many weeks I pondered on the solution, until one day while being utterly confused about it in the flatpak matrix(I highly encourage anyone facing issues flatpaking an app to ask for help on the flatpak matrix). Github user tommytran732 pointed out that adding `--filesystem=xdg-run/gnupg:ro` and dropping pinentry from the flatpak fixed the issues.
 
 Breaking down the fix, this permission allows gpg to interact with the hosts `gpg-agent` daemon/instance. When the daemon receives a request for the GPG key registered for git commit signing, if the key is already unlocked it just hands over the required data. If the key is not unlocked it will use `pinentry` to unlock it for you.
 
