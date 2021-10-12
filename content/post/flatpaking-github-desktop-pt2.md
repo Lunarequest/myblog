@@ -11,6 +11,8 @@ Hello, hello, hello. This post is going to continue on what I went through maint
 
 GnuPG often refereed to as GPG is the GNU foundations open source implementation of the OpenPGP standard. It is used for cartographical signing and encryption, git uses GPG to signing commits to allow one to verify who made a commit.
 
+## The problems with GnuPG
+
 After I published the flatpak github user [tommytran732](https://github.com/tommytran732) brought it to my attention that GPG did not work. Initially I thought this would be an easy fix, simply adding GPG to the flatpak should have been enough in my mind. Oh how I was wrong. I ran into multiple issues with gpg spitting out ioctl errors. 
 
 ioctl errors, if you have run into them before, are really cryptic. I ended up adding some permissions to the flatpak:  `--filesysystem=~/.gnupg:ro`. This would create a fix for the issue when running gpg from a command line but it wouldn't work if run from `git`. At this point running out of ideas, I reached out the the flatpak matrix looking for advice. I was given a link to the Gnome Mail flatpak.
