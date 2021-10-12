@@ -1,6 +1,6 @@
 ---
 title: "Flatpaking Github Desktop Pt2: GPG"
-date: 2021-09-30T11:29:44+05:30
+date: 2021-10-12T11:29:44+05:30
 tags: [flatpak, github-desktop]
 draft: false
 ---
