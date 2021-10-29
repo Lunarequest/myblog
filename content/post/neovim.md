@@ -1,5 +1,5 @@
 ---
-title: "Neovim"
+title: "Why you should use Neovim"
 date: 2021-10-29T17:34:30+05:30
 tags: [neovim, 'messing about']
 draft: true
