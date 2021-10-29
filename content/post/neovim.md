@@ -5,7 +5,7 @@ tags: [neovim, 'messing about']
 draft: true
 ---
 
-Neovim is a fork vim that is just better than vim. In fact, I am writing this post in neovim. Neovim was forked, due to Bram being the sole maintainer of vim. refusing to allow breaking changes in the code. Neovim has been around since 2014 and since then has shown that vim is stuck in the past. 
+[Neovim](neovim.io/) is a fork of vim that is just better than vim. In fact, I am writing this post in neovim. Neovim was forked, due to Bram being the sole maintainer of vim. refusing to allow breaking changes in the code. Neovim has been around since 2014 and since then has shown that vim is stuck in the past. 
  
 Some of the things that really sealed the deal for using neovim are the built-in LSP integration and treesitter. One of the many things neovim did with the fork was drop a lot of code. This included windows support initially. Currently, neovim is even looking into replacing vim's spellchecker and using
  hunspell instead. 
