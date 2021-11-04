@@ -24,3 +24,8 @@ LSP is something vim needs to have. LSP or language server protocol was invented
 Vim can do this. Saying it couldn't would be disingenuous. You need plugins that often slow it down to a crawl. Instead of the many plugins you are often forced to install for each and every language, you can set up neovim's LSP integration to load up the required binary for you giving you the first-class feel with just a few lines of Lua to tell neovim which LSP implementation you prefer for each lang. 
  
 The future is now with neovim. Neovim 6 aims to make the LSP config even better and implement more vim-specific APIs in Lua.   Enabling you to reduce the amount of vimscript, you will need to call in Lua. Neovim 0.6 aims to completely implement Treesitter neovim's new highlighting engine and an improved diagnostics API. What are you waiting for? Start hacking neovim! Write your own config!
+
+
+-- signing off
+
+Nullrequest
