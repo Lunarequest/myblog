@@ -1,6 +1,6 @@
 ---
 title: "Search"
-disable_comments: true 
+layout: "search"
+disable_comments: true
 ---
 
-{{<search>}}
