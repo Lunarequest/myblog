@@ -10,10 +10,9 @@ draft: true
 Some of the things that really sealed the deal for using neovim are the built-in LSP integration and treesitter. One of the many things neovim did with the fork was drop a lot of code. This included windows support initially. Currently, neovim is even looking into replacing vim's spellchecker and using
  hunspell instead. 
  
-You might say, vim8 has async support. You are right there but, vim was forced to add async support since neovim added it. Vim has been forced to evolve and improve its
-elf due to neovim. While for a long time, vim 8 for most users was visibly the same as neovim under the hood things, have been changing. Neovim is at it again changing, the paradigm in the vim world. neovim 5.0 added the ability to replace vim script with Lua. 
+You might say, vim8 has async support. You are right there but, vim was forced to add async support becuase neovim had it and most new plugins leverged this. Vim has been forced to evolve and improve its self due to neovim. While for a long time, vim 8 for most users was visibly the same as neovim under the hood things, have been changing. Neovim is at it again changing, the paradigm in the vim world. neovim 5.0 added the ability to replace vim script with Lua. 
  
-Now you might ask why Lua? Lua is something people use in Roblox. Not by real coders and, that is where you are wrong. Lua is fast. Node JS is often considered one of the fastest interpreters, is slower. Especially when you use a Jit interpreter as neovim does. The end result is that instead of a init.vim file you can use a init.lua file. Recently I ported my vimscript dependant config to Lua. 
+Now you might ask why Lua? Lua is something people use in Roblox. Not by real coders and, that is where you are wrong. LuaJiT(the interpreter neovim uses) is fast. Node JS is often considered one of the fastest interpreters, is slower. Especially when you use a Just in Time(JiT) interpreter like neovim does. The end result is that instead of a init.vim file you can use a init.lua file. I ported my 100% vimscript config to Lua after hearing a lot about it. 
  
 I was pleasantly surprised by how fast everything was once I ported it. It was faster than the vimscript version. All vim 8 compatible plugins "just" work with neovim. Most vim8 plugins started out as neovim plugins. The growing number of neovim only plugins forced Bram to release vim 8 with its many async improvements to keep up with neovim. 
  
