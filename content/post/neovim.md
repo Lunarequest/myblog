@@ -2,7 +2,7 @@
 title: "Why you should use Neovim"
 date: 2021-10-29T17:34:30+05:30
 tags: [neovim, 'messing about']
-draft: true
+draft: false
 ---
 
 [Neovim](neovim.io/) is a fork of vim that is just better than vim. In fact, I am writing this post in neovim. Neovim was forked, due to Bram being the sole maintainer of vim. refusing to allow breaking changes in the code. Neovim has been around since 2014 and since then has shown that vim is stuck in the past. 
