@@ -1,6 +1,6 @@
 ---
 title: "Why you should use Neovim"
-date: 2021-10-29T17:34:30+05:30
+date: 2022-01-08T05:13:42Z
 tags: [neovim, 'messing about']
 draft: false
 ---
