@@ -5,6 +5,6 @@ disable_comments: true
 draft: false
 ---
 
-Be respectful to all memmbers no matter how dumb or silly you feel a question is. Remeber even you were biggener once. 
+Be respectful to all members no matter how dumb or silly you feel a question is. Remember even you were beginner once.
 
 0 insults allowed, this is a place of learning. 
