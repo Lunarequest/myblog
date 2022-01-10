@@ -40,6 +40,8 @@ After this, I needed to build my config on top of the current system. Using `sud
 
 I needed to use `echo etc/nixos | sudo tee -a /etc/NIXOS_LUSTRATE`  to tell the bootstrap script not to move the configuration to /old-root. From here I use the switch-to-config script to automatically update my boot partition after moving the files in the boot partition `sudo mv -v /boot/* /boot.bak && sudo /nix/var/nix/profiles/system/bin/switch-to-configuration boot`. After this, we reboot and hope everything worked................... YES! YES, it worked. This is where this post ends. I'm going to configure some Nginx stuff and get the blog back up. cya, folks on the flip side.
 
+![screenshot of neofetch on nix](/images/nixos.png)
+
 -- signing off
 
 Nullrequest
