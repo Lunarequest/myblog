@@ -1,5 +1,5 @@
 ---
-title: "Installing nixos on a running install of Arch Linux"
+title: "Installing NixOS on a Running Install of Arch Linux"
 date: 2022-01-10T08:28:12+05:30
 tags: ["nixos", "how did we get here"]
 draft: false
