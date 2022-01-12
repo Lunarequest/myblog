@@ -19,3 +19,4 @@ In my experince using a rom can be a breath of fresh air, MiUI can be really ann
 
 ## The bad
 
+Security is complicated. You'll hear some people tell you roms are bad and they destory security and others say that it improves your security. The answer is a bit more complicated. The right rom, can change your security completely improving it beyond many many times. Others, can destory being nothing more then preloaded malware.

@@ -2,12 +2,8 @@
 
 pkgs.mkShell {
 	nativeBuildInputs = with pkgs; [ 
-    zsh
-    any-nix-shell
     neovim
     hugo
+    git
     ];
-    shellHook = ''
-        exec zsh
-    '';	
 }
