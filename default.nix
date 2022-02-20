@@ -1,7 +1,7 @@
 { stdenv, hugo, fetchgit }:
 
 {
-  pname="my blog";
+  pname="myblog";
   version = "1.0.0";
   src = fetchgit {
     "url": "https://codeberg.org/lunarequest/myblog.git",
