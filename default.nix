@@ -1,4 +1,4 @@
-{ stdenv, hugo, fetchgit }:
+{ stdenv, pkgs, fetchgit }:
 
 stdenv.mkDerivation {
   pname="myblog";
@@ -10,7 +10,7 @@ stdenv.mkDerivation {
     "fetchSubmodules" = true;
   };
 
-  buildInputs = [ hugo ];
+  buildInputs = [ pkgs.hugo ];
   
   buildphase = ''
     hugo --gc --minify -b https://nullrequest.com/
