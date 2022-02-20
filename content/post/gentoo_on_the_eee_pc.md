@@ -11,5 +11,6 @@ I decied to install gento on a eee pc a old school netbook(note these are really
 
 Gentoo is one of them, its a special distro even among all distro. Most linux distros precompile and package most software. Gentoo makes you compile everything, however there is a sane reason for doing this. You can make your system reach peak performance which is very important when dealing with a Atom Cpu(bassically a raspberry pi 4 can run circles around it).
 
+My ordeal of gentoo started in a fairly straigh forward way. Downloading the iso configuring portage through the make.conf etc but then i hit my first road block see in my naievity I had over estimated the systems age and gone with i386 instead of i686. i686 is the bare minimum to run upstream rust, i585 can run it but requires some things to be disabled.
 
-
+Thus I entered compile hell and rebuilt the enteir systemd. At this point i had been installing the system for 3 days
