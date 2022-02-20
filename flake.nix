@@ -12,6 +12,24 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
+      packages.website = pkgs.stdenv.mkDerivation rec {
+        pname = "myblog";
+        version = "2022-02-20";
+        src = {
+              path = ./.;
+              submodules=true;
+        };
+        nativeBuildInputs = with pkgs; [ hugo ];
+        buildPhase = "
+          git submodule init
+          git submodule init --merge
+          hugo --gc --minify -b https://nullrequest.com/
+        ";
+        installPhase = "cp -r public $out";
+      };
+
+      defaultPackage = self.packages.${system}.website;
+
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
           hugo
