@@ -9,7 +9,7 @@
       flake = false;
     };
     harbor = {
-      url = github:matsuyoshi30/harbor;
+      url = "github:matsuyoshi30/harbor";
       flake= false;
     };
   };
@@ -26,8 +26,8 @@
         src = ./.;
         nativeBuildInputs = with pkgs; [ hugo ];
         buildPhase = "
-          mkdir -p themes/harbor
-          ln -s { inputs.harbor } themes/harbor
+          mkdir -p themes
+          ln -s ${inputs.harbor} themes/harbor
           hugo --gc --minify -b https://nullrequest.com/
         ";
         installPhase = "cp -r public $out";
@@ -41,8 +41,8 @@
           neovim
         ];
         shellHook = ''
-          mkdir -p themes/harbor
-          ln -s { inputs.harbor } themes/harbor
+          mkdir -p themes
+          ln -s ${inputs.harbor} themes/harbor
           test -f ~/.zshrc && exec zsh
         '';
       };
