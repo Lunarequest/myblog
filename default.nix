@@ -1,6 +1,6 @@
 { stdenv, hugo, fetchgit }:
 
-{
+stdenv.mkDerivation {
   pname="myblog";
   version = "1.0.0";
   src = fetchgit {
