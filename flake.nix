@@ -1,9 +1,25 @@
 {
   description = "everything needed to develop my blog";
 
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs = {
+    nixpkgs.url      = "github:nixos/nixpkgs/nixos-unstable";
+    flake-utils.url  = "github:numtide/flake-utils";
+  };
+
   outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = nixpkgs.legacyPackages.${system};
-      in { devShell = import ./shell.nix { inherit pkgs; }; });
+  flake-utils.lib.eachDefaultSystem( system:
+    let 
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
+      devShell = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          hugo
+          neovim
+        ];
+        shellHook = ''
+          test -f ~/.zshrc && exec zsh
+        '';
+      };
+  });
 }
