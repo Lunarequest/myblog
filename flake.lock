@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641205782,
+        "narHash": "sha256-4jY7RCWUoZ9cKD8co0/4tFARpWB+57+r1bLLvXNJliY=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "b7547d3eed6f32d06102ead8991ec52ab0a4f1a7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1644229661,
@@ -12,6 +28,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "harbor": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1643286307,
+        "narHash": "sha256-6s80xAToeqozsrDHg7U2oQkI2cbcjUmlGW6y9RD/cGM=",
+        "owner": "matsuyoshi30",
+        "repo": "harbor",
+        "rev": "ec2a226f596fa5b6f12c878baecfbb265e2b4c18",
+        "type": "github"
+      },
+      "original": {
+        "owner": "matsuyoshi30",
+        "repo": "harbor",
         "type": "github"
       }
     },
@@ -33,7 +65,9 @@
     },
     "root": {
       "inputs": {
+        "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
+        "harbor": "harbor",
         "nixpkgs": "nixpkgs"
       }
     }
