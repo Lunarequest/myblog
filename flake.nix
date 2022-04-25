@@ -2,8 +2,7 @@
   description = "everything needed to develop my blog";
 
   inputs = {
-    nixpkgs.url      = "github:nixos/nixpkgs/nixos-unstable";
-    flake-utils.url  = "github:numtide/flake-utils";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-compat = {
       url = "github:edolstra/flake-compat";
       flake = false;
@@ -14,38 +13,39 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, flake-utils, ... }:
-  flake-utils.lib.eachDefaultSystem( system:
+  outputs = inputs @ { self, nixpkgs, ... }:
     let 
-      pkgs = import nixpkgs { inherit system; };
+      supportedSystems = [ "x86_64-linux" "i686-linux" "aarch64-linux" ];
+      genSystems = nixpkgs.lib.genAttrs supportedSystems;
+      pkgsFor = nixpkgs.legacyPackages;
     in
     {
-      packages.website = pkgs.stdenv.mkDerivation rec {
-        pname = "myblog";
-        version = "2022-02-20";
-        src = ./.;
-        nativeBuildInputs = with pkgs; [ hugo ];
-        buildPhase = "
-          mkdir -p themes
-          ln -s ${inputs.harbor} themes/harbor
-          hugo --gc --minify -b https://nullrequest.com/
-        ";
-        installPhase = "cp -r public $out";
-      };
+      packages =  genSystems(system: rec{
+        website = pkgsFor.${system}.stdenv.mkDerivation rec {
+          pname = "myblog";
+          version = "2022-02-20";
+          src = ./.;
+          nativeBuildInputs = with pkgsFor.${system}; [ hugo ];
+          buildPhase = "
+            mkdir -p themes
+            ln -s ${inputs.harbor} themes/harbor
+            hugo --gc --minify -b https://nullrequest.com/
+          ";
+          installPhase = "cp -r public $out";
+        }; 
+        default = website;
+      });
 
-      defaultPackage = self.packages.${system}.website;
+      
+      devShells = genSystems (system: {
+        default = with pkgsFor.${system};
+        mkShell ({
+            packages = [ hugo ];
+            shellHook = ''
+            
+            '';
 
-      devShell = pkgs.mkShell {
-        buildInputs = with pkgs; [
-          hugo
-          neovim
-        ];
-        shellHook = ''
-          test -d && rm -rf themes
-          mkdir -p themes
-          ln -s ${inputs.harbor} themes/harbor
-          test -f ~/.zshrc && exec zsh
-        '';
-      };
-  });
+        });
+      });
+    };
 }
