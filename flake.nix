@@ -42,9 +42,8 @@
         mkShell ({
             packages = [ hugo ];
             shellHook = ''
-            
+                test -f ~/.zshrc && exec zsh
             '';
-
         });
       });
     };
