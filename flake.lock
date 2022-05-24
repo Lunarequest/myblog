@@ -19,11 +19,11 @@
     "harbor": {
       "flake": false,
       "locked": {
-        "lastModified": 1647956687,
-        "narHash": "sha256-xT1IdbzJSRHZY1JVGatvhf71Mk6iGzAljoKNdU0I+9s=",
+        "lastModified": 1651485561,
+        "narHash": "sha256-P8JxZ2wNmo/G1QHNobjgSjluZQ4gAZ4lH8OcS3286YU=",
         "owner": "matsuyoshi30",
         "repo": "harbor",
-        "rev": "591a7afa86697e4b1f72afe5b1303a01a7697430",
+        "rev": "a7b75e0f99f7ffcedc4518b07d27aee70576c285",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1651007983,
-        "narHash": "sha256-GNay7yDPtLcRcKCNHldug85AhAvBpTtPEJWSSDYBw8U=",
+        "lastModified": 1653060744,
+        "narHash": "sha256-kfRusllRumpt33J1hPV+CeCCylCXEU7e0gn2/cIM7cY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e10da1c7f542515b609f8dfbcf788f3d85b14936",
+        "rev": "dfd82985c273aac6eced03625f454b334daae2e8",
         "type": "github"
       },
       "original": {

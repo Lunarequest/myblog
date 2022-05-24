@@ -42,6 +42,8 @@
         mkShell ({
             packages = [ hugo ];
             shellHook = ''
+                mkdir -p themes
+                ln -s ${inputs.harbor} themes/harbor
                 test -f ~/.zshrc && exec zsh
             '';
         });
