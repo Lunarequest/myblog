@@ -20,7 +20,7 @@
       pkgsFor = nixpkgs.legacyPackages;
     in
     {
-      packages =  genSystems(system: rec{
+      packages =  genSystems(system: rec{   
         website = pkgsFor.${system}.stdenv.mkDerivation rec {
           pname = "myblog";
           version = "2022-02-20";
