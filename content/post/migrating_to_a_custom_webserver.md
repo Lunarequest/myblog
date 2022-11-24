@@ -12,7 +12,7 @@ Project Iris is an all-in-one web blogging application that supports all my need
 Here's a short list of things I have here that I need to implement.
 
 - [ ] tags
-- [ ] working about page(I know I need to add itm, but I keep forgetting :D )
+- [ ] working about page(I know I need to add it, but I keep forgetting :D )
 - [ ] contact form 
 
 Yup. I've implemented most of what I have on this blog. I'm close to being able to replace it but not quite there. At this point, I do need to start testing it and making it blow up. The more issues I find while deploying it in a development env is more bugs fixed before production. 
