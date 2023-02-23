@@ -45,15 +45,19 @@ canonifyURLs = true
   name="instagram"
   url="https://www.instagram.com/nullrequest_/"
   icon="fab fa-instagram fa-2x"
+  aria_label="A link to my instagram account"
+
 [[params.social]]
   name="mastodon"
   url="https://hachyderm.io/@lunarequest"
   icon="fa-brands fa-mastodon"
+  aria_label="My mastodon where i'm most active"
 
 [[params.social]]
   name="mail"
-  url="mailto:advaith.madhukar@gmail.com"
+  url="mailto:luna.dragon@suse.com"
   icon="fas fa-envelope-open-text fa-2x"
+  aria_label="Email my if you like the old school stuff"
 
 
 [taxonomies]
