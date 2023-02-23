@@ -42,9 +42,13 @@ canonifyURLs = true
     alt = "Logo"
   
 [[params.social]]
-  name= "instagram"
+  name="instagram"
   url="https://www.instagram.com/nullrequest_/"
   icon="fab fa-instagram fa-2x"
+[[params.social]]
+  name="mastodon"
+  url="https://hachyderm.io/@lunarequest"
+  icon=""
 
 [[params.social]]
   name="mail"
