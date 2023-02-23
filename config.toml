@@ -48,7 +48,7 @@ canonifyURLs = true
 [[params.social]]
   name="mastodon"
   url="https://hachyderm.io/@lunarequest"
-  icon=""
+  icon="fa-brands fa-mastodon"
 
 [[params.social]]
   name="mail"
