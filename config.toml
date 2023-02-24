@@ -24,6 +24,7 @@ canonifyURLs = true
   icon = "fa-solid fa-user fa-lg"
   url = "/about/"
   weight = 3
+  aria_label = "This is a link to my about page, the icon is the no picture icon on facebook"
 
 [[params.nav]]
   identifier = "search"
@@ -31,6 +32,7 @@ canonifyURLs = true
   icon = "fas fa-search fa-lg"
   url = "search"
   weight = 3
+  aria_label="This is a link to the search page. The icon is the magnifine glass"
 
 [params]
   mainSections = ["post"]
