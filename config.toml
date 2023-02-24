@@ -35,7 +35,7 @@ canonifyURLs = true
 [params]
   mainSections = ["post"]
   favicon = "favicon.ico"
-  FontAwesomeURL = "https://kit.fontawesome.com/beafef2608.css"
+  FontAwesomeURL = "https://kit.fontawesome.com/beafef2608.js"
   [params.logo]
     url = "iconx50.webp" # static/images/
     width = 50
