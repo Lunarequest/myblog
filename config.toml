@@ -21,10 +21,9 @@ canonifyURLs = true
 [[params.nav]]
   identifier = "about"
   name = "About"
-  icon = "fas fa-user fa-lg"
+  icon = "fa-solid fa-user fa-lg"
   url = "/about/"
   weight = 3
-
 
 [[params.nav]]
   identifier = "search"
@@ -32,15 +31,17 @@ canonifyURLs = true
   icon = "fas fa-search fa-lg"
   url = "search"
   weight = 3
+
 [params]
   mainSections = ["post"]
   favicon = "favicon.ico"
+  FontAwesomeURL = "https://kit.fontawesome.com/beafef2608.css"
   [params.logo]
     url = "iconx50.webp" # static/images/
     width = 50
     height = 50
     alt = "Logo"
-  
+
 [[params.social]]
   name="instagram"
   url="https://www.instagram.com/nullrequest_/"
@@ -50,7 +51,7 @@ canonifyURLs = true
 [[params.social]]
   name="mastodon"
   url="https://hachyderm.io/@lunarequest"
-  icon="fa-brands fa-mastodon"
+  icon="fa-brands fa-mastodon fa-2x"
   aria_label="My mastodon where i'm most active"
 
 [[params.social]]
